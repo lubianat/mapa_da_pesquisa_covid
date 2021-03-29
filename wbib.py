@@ -42,132 +42,56 @@ def render_dashboard():
     </div>
     <div class="column is-half has-text-centered">
   </section>
-  <div class="columns is-centered">
-    <div class="tabs is-centered">
-      <ul>
-        <li id="one-tab" class="">
-          <a onclick="switchToOne()">
-            <span>Artigos</span>
-          </a>
-        </li>
-        <li id="three-tab">
-          <a onclick="switchToThree()">
-            <span>Temas (lista)</span>
-          </a>
-        </li>
-        <li id="four-tab">
-          <a onclick="switchToFour()">
-            <span>Revistas</span>
-          </a>
-        </li>
-        <li id="five-tab">
-          <a onclick="switchToFive()">
-            <span>Autores (mapa)</span>
-          </a>
-        <li id="seven-tab">
-          <a onclick="switchToSeven()">
-            <span>Autores (lista)</span>
-          </a>
-        </li>
-      </ul>
-      <!--/tabs is-centered-->
-    </div>
-  </div>
-  </div>
-  </section>
-  <div class="container">
-    <div id="one-tab-content">
+   </section>
+
+      <h5 class="title is-5" style="text-align:center;display:block;"> Instituições no território nacional que publicaram sobre o tema</h5>
+                  <p align="center">
+          <iframe width=75%   height="400" src=""" + '"'+ url5 +'"' + """></iframe>
+          </p>
+   <br></br>
+
       <h5 class="title is-5" style="text-align:center;"> 100 artigos mais recentes com pé no Brasil </h5>
-          <iframe width=92% height="500" src=""" + '"'+ url1 +'"' + """></iframe>
-    </div>
-    <div class="is-hidden" id="five-tab-content">
-      <h5 class="title is-5" style="text-align:center;"> Mapa das instituições no território nacional </h5>
-            <iframe width=92% height="500" src=""" + '"'+ url5 +'"' + """></iframe>
-    </div>
-    <div class="is-hidden" id="seven-tab-content">
-      <h5 class="title is-5" style="text-align:center;"> Autores dos artigos, por número de publicações sobre o tema </h5>
-        <iframe width=92% height="500" src=""" + '"'+ url7 +'"' + """></iframe>
-      </div>
-    <div class="is-hidden" id="three-tab-content">
+        <p align="center">
+          <iframe width=75% height="400" src=""" + '"'+ url1 +'"' + """></iframe>
+        </p>
+    <br></br>
+     <h5 class="title is-5" style="text-align:center;"> Autores por número de publicações sobre o tema </h5>
+        <p align="center">
+        <iframe width=75%  height="400" src=""" + '"'+ url7 +'"' + """></iframe>
+        </p>
+        <br></br>
       <h5 class="title is-5" style="text-align:center;"> Top 100 tópicos relacionados  </h5>
-            <iframe width=92% height="500" src=""" + '"'+ url3+'"' + """></iframe>
-    </div>
-    <div class="is-hidden" id="four-tab-content">
+        <p align="center">
+            <iframe width=75%  height="400" src=""" + '"'+ url3+'"' + """></iframe>
+        </p>
+<br></br>
       <h5 class="title is-5" style="text-align:center;"> Revistas nas quais esses artigos foram publicados</h5>
-            <iframe width=92% height="500" src=""" + '"'+ url4 +'"' + """></iframe>
-    </div>
-
-
+      <p align="center">
+            <iframe width=75%  height="400" src=""" + '"'+ url4 +'"' + """></iframe>
+      </p>
+<br></br>
+  </p>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-
-    function switchToOne() {
-      removeActive();
-      hideAll();
-      $("#one-tab").addClass("is-active");
-      $("#one-tab-content").removeClass("is-hidden");
-    }
-
-    function switchToThree() {
-      removeActive();
-      hideAll();
-      $("#three-tab").addClass("is-active");
-      $("#three-tab-content").removeClass("is-hidden");
-    }
-
-    function switchToFour() {
-      removeActive();
-      hideAll();
-      $("#four-tab").addClass("is-active");
-      $("#four-tab-content").removeClass("is-hidden");
-    }
-
-    function switchToFive() {
-      removeActive();
-      hideAll();
-      $("#five-tab").addClass("is-active");
-      $("#five-tab-content").removeClass("is-hidden");
-    }
-
-    function switchToSeven() {
-      removeActive();
-      hideAll();
-      $("#seven-tab").addClass("is-active");
-      $("#seven-tab-content").removeClass("is-hidden");
-    }
-
-    function removeActive() {
-      $("li").each(function () {
-        $(this).removeClass("is-active");
-      });
-    }
-
-    function hideAll() {
-      $("#one-tab-content").addClass("is-hidden");
-      $("#three-tab-content").addClass("is-hidden");
-      $("#four-tab-content").addClass("is-hidden");
-      $("#five-tab-content").addClass("is-hidden");
-      $("#seven-tab-content").addClass("is-hidden");
-      $("#eight-tab-content").addClass("is-hidden");
-    }
-
-  </script>
-  </br>
+ </br>
 
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
         <p>
-          Esse conteúdo está disponível <a href="https://creativecommons.org/publicdomain/zero/1.0/"> sob a licença
+          Esse conteúdo está disponível <a target="_blank" href="https://creativecommons.org/publicdomain/zero/1.0/"> sob a licença
             Creative Commons CC0</a>
-
-        <p> Buscas SPARQL adapadtadas da plataforma <a href="https://scholia.toolforge.org/">Scholia</a> </p>
-        <p> Dashboard adaptado por <a href="https://www.wikidata.org/wiki/User:TiagoLubiana">TiagoLubiana</a>
-          a partir do dashboard <a href="https://wikiproject-india.github.io/covid19dashboard/"> do WikiProjeto COVID-19
-            na Índia</a>
-        <p> Código do site disponível em <a href="https://github.com/lubianat/mapa_da_pesquisa_covid">
+        <p> O conteúdo do site depende da completude da informação no Wikidata, e sua contribuição é valiosa! </p>
+        <p>
+        Se quiser ajudar a mapear os autores a seus artigos, veja <a target="_blank" href="https://tiagolubiana.medium.com/adicionando-cientistas-ao-sistema-wikidata-scholia-6b73ae5e59e2
+">o tutorial passo a passo no Medium</a>.</p> 
+        <p> Caso queira ajudar mais, a ferramenta <a target="_blank" href="https://lubianat.shinyapps.io/quicklit/"> QuickLit </a>, 
+        que ainda está em desenvolvimento, dá sugestões de artigos para  catalogar. </p>
+        <p> Código do site disponível em <a target="_blank" href="https://github.com/lubianat/mapa_da_pesquisa_covid">
             https://github.com/lubianat/mapa_da_pesquisa_covid </a>. </p>
+          <p> Buscas SPARQL adapadtadas da plataforma <a target="_blank" href="https://scholia.toolforge.org/">Scholia</a> </p>
+        <p> Dashboard adaptado por <a target="_blank" href="https://www.wikidata.org/wiki/User:TiagoLubiana">TiagoLubiana</a>
+          a partir do dashboard <a target="_blank" href="https://wikiproject-india.github.io/covid19dashboard/"> do WikiProjeto COVID-19
+            na Índia</a>
         </p>
       </div>
     </div>
