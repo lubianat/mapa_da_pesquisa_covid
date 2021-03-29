@@ -88,7 +88,7 @@ def render_dashboard():
         que ainda está em desenvolvimento, dá sugestões de artigos para  catalogar. </p>
         <p> Código do site disponível em <a target="_blank" href="https://github.com/lubianat/mapa_da_pesquisa_covid">
             https://github.com/lubianat/mapa_da_pesquisa_covid </a>. </p>
-          <p> Buscas SPARQL adapadtadas da plataforma <a target="_blank" href="https://scholia.toolforge.org/">Scholia</a> </p>
+          <p> Buscas SPARQL adaptadas da plataforma <a target="_blank" href="https://scholia.toolforge.org/">Scholia</a> </p>
         <p> Dashboard adaptado por <a target="_blank" href="https://www.wikidata.org/wiki/User:TiagoLubiana">TiagoLubiana</a>
           a partir do dashboard <a target="_blank" href="https://wikiproject-india.github.io/covid19dashboard/"> do WikiProjeto COVID-19
             na Índia</a>
@@ -105,16 +105,14 @@ def render_dashboard():
 
 def get_work_selector_for_covid_19():
   selector = """ 
-  ?trabalho wdt:P921 wd:Q84263196.
+  VALUES ?topic_of_interest { wd:Q84263196 wd:Q82069695 }
+  ?trabalho wdt:P921  ?topic_of_interest .
   ?trabalho wdt:P50 ?autor.
   ?autor wdt:P108 | wdt:P1416 ?institution.
   ?institution wdt:P17 wd:Q155.
   """
 
   return(selector)
-
-
-
 
 
 
